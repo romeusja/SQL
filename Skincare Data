@@ -1,0 +1,24 @@
+create table Skincare (id INTEGER PRIMARY KEY, name TEXT, form TEXT, company TEXT, price REAL); 
+
+insert into Skincare VALUES (1, "Bright_Wash", "foam", "Origins", 9.99);
+insert into Skincare VALUES (2, "Bright_Face_Cream","foam", "Origins", 12.99);
+insert into Skincare VALUES (3, "Bright_Eye_Cream", "cream", "Origins", 16.99);
+insert into Skincare VALUES (4, "Bright_Blocker", "cream", "Origins", 12.99);
+insert into Skincare VALUES (5, "Bright_Butter", "cream", "Origins", 19.99);
+insert into Skincare VALUES (6, "Acne_Oil_Wash", "oil", "Spot", 9.99);
+insert into Skincare VALUES (7, "Acne_Gel_Wash", "gel", "Spot", 9.99);
+insert into Skincare VALUES (8, "Acne_Zap", "cream", "Spot", 7.99);
+insert into Skincare VALUES (9, "Acne_Mask", "clay", "Spot", 10.99);
+insert into Skincare VALUES (10, "Acne_AM_Cream", "cream", "Spot", 9.99);
+insert into Skincare VALUES (11, "Acne_PM_Cream", "cream", "Spot", 9.99);
+insert into Skincare VALUES (12, "HydraBoost_Wash", "gel", "h20", 15.99);
+insert into Skincare VALUES (13, "HydraBoost_Cream", "cream", "h20", 18.99);
+insert into Skincare VALUES (14, "HydraBoost_Serum", "serum", "h20", 16.99);
+insert into Skincare VALUES (15, "HydraBoost_Mask", "gel", "h20", 15.99);
+
+--Display the database ordered by price, lowest to highest
+Select*from Skincare order by price;
+
+--Which items are under $15.99?
+Select count(*)as Cheap_Products from Skincare where price<= 15.99; 
+
